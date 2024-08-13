@@ -8,7 +8,6 @@ const centiSecond = document.getElementsByClassName("msec")[0];
 const laps = document.getElementsByClassName("laps")[0];
 const bg = document.getElementsByClassName("outer-circle")[0];
 
-console.log(bg);
 let isPlay = false;
 let secCounter = 0;
 let min;
@@ -26,8 +25,8 @@ const toggelButton = () => {
 
 const play = () => {
   if (!isPlay && !isReset) {
-    playButton.innerHTML = "Pause";
     bg.classList.add("animation-bg");
+    playButton.innerHTML = "Pause";
     min = setInterval(() => {
       minute.innerHTML = `${++minCounter}:`;
     }, 60 * 1000);
